@@ -1,0 +1,176 @@
+/*
+Theme Name: Awesome 2014...right
+Theme URI: http://example.org/awesome-2014
+Author: Josh Pollock / Chris Knowles / Aurovrata Venet
+Author URI: http://premium.wpmudev.com/blog
+Description: A TwentyFourteen Child Theme that addresses the parent's flaws
+Template: twentyfourteen
+Version: 1.0
+License: GPL v2+
+*/
+
+@import url("../twentyfourteen/style.css");
+
+/* Theme customization starts here */
+
+.site {
+	margin: 0 auto;
+	background-color: transparent;
+}
+.site-content .entry-header {
+    background-color: transparent;
+}
+.slider .featured-content .entry-header {
+    bottom: 10px;
+    left: 10px;
+    background: url('images/bg.png') repeat;
+}
+.slider .featured-content .entry-header .entry-title a{
+    color:#F8FEC9;
+}
+
+/* Make room for the search toggle and site description in mobile sidebar */
+#slideout-top {
+    height:48px;
+}
+
+#slideout-top .site-description {
+    display: block;
+    text-align: left;
+    font-family: lato;
+    width: 205px;
+    overflow: hidden;
+}
+
+#slideout-top .search-toggle {
+    margin-right: 0;
+}
+
+/* Override Sidr Style For 2014 Search */
+#slideout-top .search-box .search-field  {
+    background-color: white;
+    color: black;
+}
+
+/* Keep mobile toggle on the right and resize the genricon */
+#menu-toggle {
+	float: right;
+	display: inline;
+}
+
+#menu-toggle .genericon {
+	font-size: 48px;
+	padding: 0 1em 0 0;
+    z-index: 999;
+}
+
+/* enhancing the topbar */
+#big-top {
+  display: block; }
+
+#masthead {
+  height: 88px;
+  position: fixed;
+  top: 0;
+}
+
+.header-main {
+  display: inline;
+}
+
+.site-title{
+    margin: 0 0 0 20px;
+}
+
+nav#primary-navigation {
+  width: 100%;
+  display: block;
+  top: 40px;
+  left: 0px;
+  position: absolute;
+  padding-left: 30px; 
+}
+
+.topbar-description {
+  /*color: #fff;*/
+  display: inline;
+  font-weight: bold;
+  font-size: 100%;
+  text-transform: lowercase;
+  line-height: 50px;
+  vertical-align: baseline;
+  margin-left: 20px;
+  font-style: italic;
+}
+/*
+ Adjustments for setting the secondary menu sidebar to right align
+*/
+.search-box-wrapper, .featured-content {
+    padding-right: 222px;
+}
+.featured-content {
+    padding-left: 20px;
+}
+.full-width .site-content {
+    margin-right: 222px;
+}
+.site-content, .site-main .widecolumn {
+    margin-left: 0;
+}
+#secondary {
+    float: left;
+    margin: 0 0 0 -222px;
+}
+/*let's open the menus on the left hand side*/
+.secondary-navigation ul li:hover > ul, .secondary-navigation ul li.focus > ul {
+    left: -242px;
+}
+/***************************************
+MODIFY this setting to get the menu text to align according to your preference
+****************************************/
+.secondary-navigation a {
+    text-align: center;
+}
+/*let's place an arrow on the left hand side*/
+.secondary-navigation .menu-item-has-children > a:before {
+	-webkit-font-smoothing: antialiased;
+	content: "\2770";
+	display: inline-block;
+	font: normal 8px/1 Genericons;
+	position: absolute;
+	left: 26px;
+	top: 13px;
+	vertical-align: text-bottom;
+}
+/*let remove the arrow on the right*/
+.secondary-navigation .menu-item-has-children > a:after {
+	display:none;
+}
+
+/**Adjustments for the desktop topbar when screen is small**/
+@media screen and (max-width: 768px) {
+.search-toggle {
+position: absolute;
+top: -8px;
+right: 0px;
+}
+#masthead {
+height: 80px;
+}
+.topbar-menu {
+display: block;
+background-color: black;
+}
+.primary-navigation.toggled-on {
+display: block;
+padding: 48px 0 0 0px;
+background-color: black;
+}
+.nav-toggled {
+padding-top: 48px !important;
+padding-left: 0px !important;
+}
+h2.topbar-description {
+display:none;
+}
+}
