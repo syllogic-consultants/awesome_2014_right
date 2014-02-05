@@ -14,7 +14,7 @@ License: GPL v2+
 /* Theme customization starts here */
 
 .site {
-	margin: 0 auto;
+	margin: 0 0 0 auto;
 	background-color: transparent;
 }
 .site-content .entry-header {
@@ -76,6 +76,7 @@ License: GPL v2+
 
 .header-main {
   display: inline;
+  padding-left:38px;
 }
 
 .site-title{
@@ -105,11 +106,34 @@ nav#primary-navigation {
 /*
  Adjustments for setting the secondary menu sidebar to right align
 */
+#big-top {
+    float: right;
+}
+nav#primary-navigation {
+    padding-left: 0;
+}
+.primary-navigation {
+    margin: 0;
+}
+.search-toggle {
+    float: left;
+}
 .search-box-wrapper, .featured-content {
-    padding-right: 222px;
+    padding: 0;
+}
+.search-box-wrapper {
+    float:left;
+    width:auto;
+}
+#menu-top-menu{
+	position:relative;
+	float: right;
+}
+ul#menu-top-menu li:last-child a{
+	padding-right:38px;
 }
 .featured-content {
-    padding-left: 20px;
+    padding-right: 222px;
 }
 .full-width .site-content {
     margin-right: 222px;
@@ -129,7 +153,7 @@ nav#primary-navigation {
 MODIFY this setting to get the menu text to align according to your preference
 ****************************************/
 .secondary-navigation a {
-    text-align: center;
+    text-align: right;
 }
 /*let's place an arrow on the left hand side*/
 .secondary-navigation .menu-item-has-children > a:before {

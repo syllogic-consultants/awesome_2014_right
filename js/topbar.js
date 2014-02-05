@@ -37,7 +37,7 @@ jQuery(document).ready(function($) {
                 });
                 $( headerMain ).fadeOut("fast");
                 $( nav ).animate({
-                    paddingLeft: $( 'h1.site-title' ).width() + 45 + 'px',
+                    paddingRight: $( 'h1.site-title' ).width() + 45 + 'px',
                 }), {queue:false, duration:600};
                 $( nav ).css('top', '0px');
                 $nav.data('size','small').stop().animate({
@@ -57,7 +57,7 @@ jQuery(document).ready(function($) {
                     top: '40px',
                 }), {queue:false, duration:600}; ;
                 $( nav ).animate({
-                    paddingLeft: '30px',
+                    paddingRight: '30px',
                 }), {queue:false, duration:600};
                 $nav.data('size','big').stop().animate({
                     height:'88px'
