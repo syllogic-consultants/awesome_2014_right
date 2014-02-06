@@ -2,6 +2,18 @@
 /* Disable WordPress Admin Bar for all users but admins. */
 add_filter('show_admin_bar', '__return_false');
 
+if ( ! function_exists( 'awesome2014right_setup' ) ) :
+function awesome2014right_setup() {
+
+	// This theme allows users to set a custom background, let-s reset it.
+	add_theme_support( 'custom-background', apply_filters( 'twentyfourteen_custom_background_args', array(
+		'default-color' => '#878787',
+	) ) );
+
+}
+endif; // twentyfourteen_setup
+add_action( 'after_setup_theme', 'awesome2014right_setup' );
+
 //Add mobile sidebar
 function awesome_2014_mobile_widget_area() {
 register_sidebar( array(

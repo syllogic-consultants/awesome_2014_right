@@ -3,7 +3,7 @@ Theme Name: Awesome 2014...right
 Theme URI: http://example.org/awesome-2014
 Author: Josh Pollock / Chris Knowles / Aurovrata Venet
 Author URI: http://premium.wpmudev.com/blog
-Description: A TwentyFourteen Child Theme that addresses the parent's flaws
+Description: A Right aligned TwentyFourteen Child Theme that addresses the parent's flaws
 Template: twentyfourteen
 Version: 1.0
 License: GPL v2+
@@ -104,7 +104,7 @@ nav#primary-navigation {
   font-style: italic;
 }
 /*
- Adjustments for setting the secondary menu sidebar to right align
+ Adjustments for setting the header & secondary menu sidebar to right align
 */
 #big-top {
     float: right;
@@ -118,13 +118,20 @@ nav#primary-navigation {
 .search-toggle {
     float: left;
 }
-.search-box-wrapper, .featured-content {
-    padding: 0;
+/*.search-toggle:before {
+    color: #02008E;
+}*/
+.search-box-wrapper, .featured-content{
+    padding-left: 0;
 }
 .search-box-wrapper {
-    float:left;
     width:auto;
+    left:0;
+    right:auto;
 }
+/*.search-box {
+	background:url('images/bg.png') repeat; 
+}*/
 #menu-top-menu{
 	position:relative;
 	float: right;
@@ -170,7 +177,55 @@ MODIFY this setting to get the menu text to align according to your preference
 .secondary-navigation .menu-item-has-children > a:after {
 	display:none;
 }
+.site:before {
+    width: 0;
+}
+.full-width .site-content .has-post-thumbnail .entry-header, .full-width.singular .site-content .hentry.has-post-thumbnail {
+    margin-top: -109px;
+}
+/*
+ COLOURS - changed the default black for a more neutral grey to bring visual clarity
+*/
 
+body {
+    background: none repeat scroll 0 0 #878787;
+}
+.site:before {
+    background-color: #878787;
+}
+.entry-header{
+    background: url('images/bg.png') repeat;
+}
+.slider-direction-nav a {
+    background-color: #878787;
+}
+.featured-content {
+    background-image: none !important;
+}
+.post-thumbnail {
+    background: none;
+}
+.page .entry-header{
+    background: none;
+}
+.site-header {
+    background-color: #878787;
+}
+.site-content .entry-content, .site-content .entry-summary, .page-content {
+    background-color: transparent;
+}
+.site-content .entry-meta {
+    background-color: transparent;
+}
+.entry-meta a {
+    color: #B3B3B3;
+}
+.featured-content {
+    background: none;
+}
+.site-footer {
+    background-color: #878787;
+}
 /**Adjustments for the desktop topbar when screen is small**/
 @media screen and (max-width: 768px) {
 .search-toggle {
