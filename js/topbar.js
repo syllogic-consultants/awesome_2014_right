@@ -3,6 +3,7 @@ jQuery(document).ready(function($) {
     var social      = '.topbar-description';
     var nav         = 'nav#primary-navigation';
     var headerMain  = '.header-main';
+    var siteHead    = '#site-header img';
     var header      = '#masthead';
     var main        = '#main';
     
@@ -35,6 +36,7 @@ jQuery(document).ready(function($) {
                     display: 'inline',
                     top: '0px',
                 });
+                if ($(siteHead).length > 0) $( siteHead ).fadeOut("fast");
                 $( headerMain ).fadeOut("fast");
                 $( nav ).animate({
                     paddingRight: $( 'h1.site-title' ).width() + 45 + 'px',
@@ -45,6 +47,8 @@ jQuery(document).ready(function($) {
                 }, 600);
                 $( headerMain ).animate({
                     left:200, opacity:"show"}, 600);
+                if ($(siteHead).length > 0) $( siteHead ).animate({
+                      height:'48px', opacity:"show"}, 600);
             }
         }
         //when scrolled back
@@ -62,6 +66,8 @@ jQuery(document).ready(function($) {
                 $nav.data('size','big').stop().animate({
                     height:'88px'
                 }, 600);
+                if ($(siteHead).length > 0) $( siteHead ).animate({
+                      height:'85px'}, 600);
             }
         }
     });

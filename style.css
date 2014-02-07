@@ -106,11 +106,20 @@ nav#primary-navigation {
 /*
  Adjustments for setting the header & secondary menu sidebar to right align
 */
+#site-header img {
+    width: auto;
+    padding-right: 38px;
+    height: 85px;
+}
+#site-header {
+    z-index: auto;
+}
 #big-top {
     float: right;
 }
 nav#primary-navigation {
     padding-left: 0;
+    padding-right: 30px;
 }
 .primary-navigation {
     margin: 0;
@@ -137,7 +146,16 @@ nav#primary-navigation {
 	float: right;
 }
 ul#menu-top-menu li:last-child a{
-	padding-right:38px;
+	padding-right:192px;
+}
+.secondary-navigation a {
+    padding: 10px 38px;
+}
+.secondary-navigation li {
+    border-top: none;
+}
+.secondary-navigation {
+    border-bottom: none;
 }
 .featured-content {
     padding-right: 222px;
@@ -159,8 +177,10 @@ ul#menu-top-menu li:last-child a{
 /***************************************
 MODIFY this setting to get the menu text to align according to your preference
 ****************************************/
-.secondary-navigation a {
+.secondary-navigation a , .primary-navigation a {
     text-align: right;
+    font-size: 1.2em;
+    text-transform: none;
 }
 /*let's place an arrow on the left hand side*/
 .secondary-navigation .menu-item-has-children > a:before {

@@ -132,12 +132,12 @@ function awesome_2014_get_featured_posts( $posts ){
     
     $layout = get_theme_mod( 'featured_content_layout' );
     $max_posts = get_theme_mod( 'num_posts_' . $layout, 2 );
-    $
+    
     $args = array(
 		'post_type' => array( 'post', '[custom post type]'),
 		'tag' => $tag_name,
 		'posts_per_page' => $max_posts,
-		'order_by' => 'name',
+		'orderby' => 'name',
 		'order' => 'ASC',
 		'post_status' => 'publish',
     );

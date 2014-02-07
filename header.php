@@ -31,13 +31,6 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<?php if ( get_header_image() ) : ?>
-	<div id="site-header">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-			<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
-		</a>
-	</div>
-	<?php endif; ?>
 	    
 	<?php if ( wp_is_mobile() ) : ?>
 
@@ -59,6 +52,13 @@
 
         <header id="masthead" class="site-header" role="banner">
             <div id="big-top">
+            <?php if ( get_header_image() ) : ?>
+				<div id="site-header">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
+					</a>
+				</div>
+			<?php endif; ?>
                 <div class="header-main">
                     <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
                 </div>
@@ -67,7 +67,7 @@
                     if ( ! empty ( $description ) ) :
                 ?>
                 <h2 class="topbar-description"><?php echo esc_html( $description ); ?></h2>
-                <?php endif; ?>
+    <?php endif; ?>
             </div>
 
             <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
