@@ -18,3 +18,4 @@ Changes I added:
 - right aligned sidebar
 - ability to Customise the speed of slide transition from the Dashboard Customizer
 - ability to Customise the delay of 1st slide transition from the Dashboard Customizer
+- ability to order slides by renaming the slug of the featured post to slide1, slide2, slide3 etc..
