@@ -1,0 +1,60 @@
+.post-thumbnail blockquote{
+    padding:1.5em 0 0;
+    text-align:right;
+    clear:both;
+}
+blockquote{
+  display:block;
+  background: transparent;
+  padding: 0 0 0 2em;
+  margin: 0 0 20px;
+  position: relative;
+  
+  /*Font*/
+  font-size: 1.38em;
+  line-height: 1.2;
+  text-align: justify;
+  color: #002A5E;
+  
+  /*Box Shadow - (Optional)*/
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+blockquote::before{
+  content: "\f122"; /*dashicode Double Quote*/
+  
+  /*Font*/
+  font-family: "dashicons";
+  font-size: 2.5em;
+  font-weight: 300;
+  color: #C8C7D2;
+  
+  /*Positioning*/
+  position: absolute;
+  left: 0px;
+  top:0px;
+  padding:0.1em;
+}
+
+blockquote::after{
+  /*Reset to make sure*/
+  content: "";
+}
+
+blockquote a{
+  text-decoration: none;
+  background: #eee;
+  cursor: pointer;
+  padding: 0 3px;
+  color: #c76c0c;
+}
+
+blockquote a:hover{
+ color: #666;
+}
+
+blockquote em{
+  font-style: italic;
+}

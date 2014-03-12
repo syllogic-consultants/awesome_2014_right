@@ -2,6 +2,23 @@
 /* Disable WordPress Admin Bar for all users but admins. */
 add_filter('show_admin_bar', '__return_false');
 
+/*add WP 3.8 dashicons for use in css*/
+function themename_scripts() {
+wp_enqueue_style( 'themename-style', get_stylesheet_uri(), array( 'dashicons' ), '1.0' );
+}
+add_action( 'wp_enqueue_scripts', 'themename_scripts' );
+/*
+    get the slug for a post to use in unique css id/class nameing
+*/
+function the_slug(){
+  $slug = basename(get_permalink());
+  do_action('before_slug', $slug);
+  $slug = apply_filters('slug_filter', $slug);
+  //if( $echo ) echo $slug;
+  do_action('after_slug', $slug);
+  return $slug;
+}
+
 if ( ! function_exists( 'awesome2014right_setup' ) ) :
 function awesome2014right_setup() {
 
@@ -177,8 +194,13 @@ function awesome_2014_initialise_slider(){
             				namespace: 'slider-',
             			} );
             		}
+            		var minH = _window.height() - $('#masthead').outerHeight(true);
+            		$('#secondary').css('min-height',minH);
             	} );
-            	
+            	_window.resize( function() {
+                    var minH = _window.height() - $('#masthead').outerHeight(true);
+            		$('#secondary').css('min-height',minH)   
+                });
             } )( jQuery );
         </script>
     <?php 
@@ -194,6 +216,7 @@ function awesome_2014_featured_content_scripts() {
     
     wp_enqueue_script( 'awesome_2014-script', get_stylesheet_directory_uri() . '/js/functions.js', array( 'jquery' ), '' , true );
     if ( is_front_page() && 'slider' == get_theme_mod( 'featured_content_layout' ) ) {
+            wp_enqueue_style( 'custom-slider', get_stylesheet_directory_uri() . '/css/slider.css' );
             wp_enqueue_script( 'awesome_2014-slider', get_stylesheet_directory_uri() . '/js/jquery.flexslider-min.js', array( 'jquery', 'awesome_2014-script' ), '' , true );
             wp_localize_script( 'awesome_2014-slider', 'featuredSliderDefaults', array(
                 'prevText' => __( 'Previous', 'awesome_2014' ),
@@ -203,3 +226,93 @@ function awesome_2014_featured_content_scripts() {
 }
 add_action( 'wp_enqueue_scripts' , 'awesome_2014_featured_content_scripts' , 999 );
 
+function syllogic_post_thumbnail() {
+	if ( post_password_required() || ! has_post_thumbnail() ) {
+		return;
+	}
+    $quoted = get_post_meta(get_the_ID(),"quoted_text");
+	if ( is_singular() ) :
+	?>
+	
+	<div class="post-thumbnail">
+	<?php
+		if ( ( ! is_active_sidebar( 'sidebar-2' ) || is_page_template( 'page-templates/full-width.php' ) ) ) {
+			the_post_thumbnail( 'twentyfourteen-full-width' );
+		} else {
+			the_post_thumbnail();
+		}
+		if($quoted[0] !=''){
+	?>
+	   <blockquote><?php echo $quoted[0]; ?> </blockquote>
+	<?php }
+	?>
+	</div>
+
+	<?php else : ?>
+
+	<a class="post-thumbnail" href="<?php the_permalink(); ?>">
+	<?php
+		if ( ( ! is_active_sidebar( 'sidebar-2' ) || is_page_template( 'page-templates/full-width.php' ) ) ) {
+			the_post_thumbnail( 'twentyfourteen-full-width' );
+		} else {
+			the_post_thumbnail();
+		}
+		if($quoted[0] !=''){
+	?>
+	    <blockquote><?php echo $quoted[0]; ?> </blockquote>
+	<?php }
+	?>
+	</a>
+
+	<?php endif; // End is_singular()
+}
+add_filter('twentyfourteen_post_thumbnail','syllogic_post_thumbnail',1,0);
+
+function syllogic_theme_comment($comment, $args, $depth) {
+		$GLOBALS['comment'] = $comment;
+		extract($args, EXTR_SKIP);
+
+		if ( 'div' == $args['style'] ) {
+			$tag = 'div';
+			$add_below = 'comment';
+		} else {
+			$tag = 'li';
+			$add_below = 'div-comment';
+		}
+?>
+		<<?php echo $tag ?> <?php comment_class(empty( $args['has_children'] ) ? '' : 'parent') ?> id="comment-<?php comment_ID() ?>">
+		<?php if ( 'div' != $args['style'] ) : ?>
+		<article id="div-comment-<?php comment_ID() ?>" class="comment-body">
+		<?php endif; ?>
+		    <footer class="comment-meta comment-meta-syllogic">
+		        <div class="comment-author comment-author-syllogic vcard">
+		        <?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['avatar_size'] ); ?>
+		            <?php printf(__('<cite class="fn syllogic-cite">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?>
+		        </div>
+                <?php if ($comment->comment_approved == '0') : ?>
+		            <em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.') ?></em>
+		            <br />
+                <?php endif; ?>
+
+    		    <div class="comment-metadata syllogic-comment-metadata">
+                    <a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
+                        <time datetime="<?php comment_time( 'c' ); ?>">
+                            <?php printf( _x( '%1$s at %2$s', '1: date, 2: time' ), get_comment_date(), get_comment_time() ); ?>
+                        </time>
+                    </a>
+                    <?php edit_comment_link( __( 'Edit' ), '<span class="edit-link">', '</span>' ); ?>
+                </div><!-- .comment-metadata -->
+
+			<div class="comment-content syllogic-comment-content">
+		        <?php comment_text() ?>
+            </div> <!-- comment-content -->
+		    <div class="reply syllogic-reply">
+		    <?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+		    </div>
+		    <?php if ( 'div' != $args['style'] ) : ?>
+		</article> <!-- div-comment-<?php comment_ID() ?>-->
+		<?php endif; ?>
+<?php
+}
+
+?>

@@ -32,23 +32,23 @@ jQuery(document).ready(function($) {
             if ($nav.data('size') == 'big') {
                 mastFix();
                 $( social ).css('display', 'none');
+                //if ($(siteHead).length > 0) $( siteHead ).fadeOut("fast");
+                //$( headerMain ).fadeOut("fast");
+                $( nav ).animate({
+                    //paddingRight: $( 'h1.site-title' ).width() + 15 + 'px',
+                    paddingRight:0,
+                }), {queue:false, duration:600};
                 $( nav ).css({
                     display: 'inline',
-                    top: '0px',
-                });
-                if ($(siteHead).length > 0) $( siteHead ).fadeOut("fast");
-                $( headerMain ).fadeOut("fast");
-                $( nav ).animate({
-                    paddingRight: $( 'h1.site-title' ).width() + 45 + 'px',
-                }), {queue:false, duration:600};
-                $( nav ).css('top', '0px');
+                    top: '0px', });
                 $nav.data('size','small').stop().animate({
                     height:'48px'
-                }, 600);
+                }, 60);
                 $( headerMain ).animate({
-                    left:200, opacity:"show"}, 600);
+                    left:200, opacity:"show"}, 0);
+                $( nav ).css('top', '0px');    
                 if ($(siteHead).length > 0) $( siteHead ).animate({
-                      height:'48px', opacity:"show"}, 600);
+                      height:'48px', opacity:"show"}, 60);
             }
         }
         //when scrolled back
@@ -62,7 +62,7 @@ jQuery(document).ready(function($) {
                 }), {queue:false, duration:600}; ;
                 $( nav ).animate({
                     paddingRight: '30px',
-                }), {queue:false, duration:600};
+                }), {queue:false, duration:60};
                 $nav.data('size','big').stop().animate({
                     height:'88px'
                 }, 600);

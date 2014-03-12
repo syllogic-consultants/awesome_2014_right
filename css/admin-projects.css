@@ -1,0 +1,6 @@
+/*
+css adjustments for Project Management plugin used in Syllogic office management site
+*/
+ul.cpm-todolists article.cpm-todolist > ul li .cpm-todo-wrap .cpm-todo-action {
+    left: -38px;
+}

@@ -1,0 +1,46 @@
+body .creativ-shortcode-toggle h3.creativ-shortcode-toggle-heading {
+    font-weight: lighter;
+    text-align: center;
+}
+.comment-reply-title, .comments-title {
+    font: inherit;
+    text-align: center;
+}
+.comment-author-syllogic {
+    padding:0 120px 0 0;
+}
+.comment-author-syllogic .avatar{
+    left:auto;
+    right:0;
+    height: auto;
+    width: auto;
+}
+.syllogic-cite{
+    float:right;
+}
+.syllogic-comment-metadata{
+    clear:both;
+    padding:0 120px 0 0;
+}
+.syllogic-comment-metadata a{
+    float:right;
+}
+.syllogic-comment-metadata .edit-link{
+    padding-right:4px;
+}
+.syllogic-comment-content{
+    padding:0 120px 0 0;
+}
+.syllogic-comment-content p{
+    float:right;
+    text-align: justify;
+}
+.syllogic-reply{
+    padding:0 120px 0 0;
+}
+.syllogic-reply a{
+    float:right;
+}
+.comment-form p{
+    text-align:right;
+}
