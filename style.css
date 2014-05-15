@@ -1,0 +1,25 @@
+/*
+Theme Name: Awesome 2014...right
+Theme URI: http://example.org/awesome-2014
+Author: Josh Pollock / Chris Knowles / Aurovrata Venet
+Author URI: http://premium.wpmudev.com/blog
+Description: A Right aligned TwentyFourteen Child Theme that addresses the parent's flaws
+Template: twentyfourteen
+Version: 1.0
+License: GPL v2+
+*/
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,400italic|Source+Code+Pro);
+@import url("../twentyfourteen/style.css");
+@import url("./css/quotes.css"); /* css styling for quotes*/
+@import url("./css/comments.css"); /* css styling for comments*/
+@import url("./css/responsive.css"); 
+@import url("./css/style_grid.css"); 
+
+
+/* 
+
+Theme customization is done in CSS folder
+
+DO NOT PUT any CSS below here
+*/
+
