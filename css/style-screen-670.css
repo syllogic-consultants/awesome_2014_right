@@ -1,0 +1,116 @@
+
+@media screen and (max-width: 672px) {
+    body, button, input, select, textarea {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+    
+    .entry-title {
+        font-size: 26px;
+    }
+    nav#primary-navigation {
+        left: 0px;
+        top: 0px;
+    }
+    
+    .search-toggle {
+        cursor: pointer;
+        height: 35px;
+        text-align: center ;
+        width: 35px;
+    	margin-right: 15px;
+    	top: 6px;
+    }
+    .full-width .post-thumbnail_grid {
+    	margin-top: 0px;
+    }
+    .search-toggle:before {
+        margin-top: 9px;
+    	
+    }
+    
+    .full-width .col-1-2 .post-thumbnail_grid {
+    	min-height:170px;
+    }
+    
+    .col-1-2, .col-6-12 {
+        min-height: 170px;
+    }
+    .grid_fourth{
+    	width:245px;
+    /*	background:#f1f1f1;*/
+    	float:left;
+    	border:1px solid #f1f1f1;
+    	min-height:350px;
+    	margin: 5px;
+        width: 270px;
+    }
+    .site-content .grid_fourth .entry-header a .entry-title {
+        font-size: 20px;
+        font-weight: 100;
+        margin: 14px;
+        text-align: left;
+        text-transform: capitalize;
+    }
+    #slideout-top {
+        margin-left: 7px;
+    }
+    .site-header {
+        height: 60px;
+    }
+    .full-width .site-content {
+        margin-right: 0px;
+    }
+    .post-thumbnail blockquote {
+    	display:none;
+    }
+    .full-width .post-thumbnail {
+        float: right;
+        margin-top: 15px;
+        margin-right: 14px;
+        width: 250px;
+        max-width:none;
+    }
+    .has-post-thumbnail .entry-header, 
+    .has-post-thumbnail .entry-content, 
+    .has-post-thumbnail .entry-summary, 
+    .has-post-thumbnail .entry-meta {
+        clear: both;
+        float: none;
+    }
+    .site-content .entry-content{
+    	margin:5px;
+    	clear: both;
+    }
+    .site-content .entry-header{
+    	margin:5px;
+    	padding: 0;
+    	text-align: right;
+    } 
+    .entry-header .entry-title{
+    	text-align: right;
+    	margin:5px;
+    } 
+    .site-content .entry-header, .site-content .entry-content, .site-content .entry-summary, .site-content .entry-meta, .page-content {
+        max-width: 100%;
+    }
+    .site-content .entry-summary, .site-content .entry-meta, .page-content {
+        margin: 0 0 0 12% ;
+    }
+    #masthead {
+        height: 60px;
+    }
+    .site-footer {
+        bottom: 0px;
+    }
+    .site-footer, .site-info, .site-info a {
+        color: #2B2B2B;
+    }
+    #featured-content {
+        background-image:none !important;
+    	 margin-top: 5px;
+    }
+    .site-main{
+    	margin-top:60px;
+    }
+}

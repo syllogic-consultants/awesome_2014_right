@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 $("#menu-toggle").sidr({
 name: "slideout",
-side: "left",
+side: "right",
 displace: false,
 });
 

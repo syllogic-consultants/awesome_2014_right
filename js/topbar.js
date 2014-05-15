@@ -6,6 +6,7 @@ jQuery(document).ready(function($) {
     var siteHead    = '#site-header img';
     var header      = '#masthead';
     var main        = '#main';
+    var smallHeaderbg = '#F2EDD3';
     
     //margin fix for masthead function
     var mastFix = function() {
@@ -46,7 +47,8 @@ jQuery(document).ready(function($) {
                 }, 60);
                 $( headerMain ).animate({
                     left:200, opacity:"show"}, 0);
-                $( nav ).css('top', '0px');    
+                $( nav ).css('top', '0px'); 
+                $(header).css('background-color',smallHeaderbg);
                 if ($(siteHead).length > 0) $( siteHead ).animate({
                       height:'48px', opacity:"show"}, 60);
             }
@@ -55,6 +57,7 @@ jQuery(document).ready(function($) {
         else {
             if ($nav.data('size') == 'small') {
                 mastFix();
+                $(header).css('background-color','transparent');
                 $( social ).css('display', 'inline');
                 $( nav ).animate({
                     display: 'block',

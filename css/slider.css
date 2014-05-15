@@ -12,6 +12,20 @@ use this for setting up the custom css for each slide such as header position, s
     font-style: normal;
 
 }
+.slider .featured-content .entry-header {
+    bottom: 10px;
+    left: 10px;
+    background: url('../images/bg.png') repeat;
+    /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+  -webkit-border-radius: 10px;
+  /* Firefox 1-3.6 */
+  -moz-border-radius: 10px;
+  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+  border-radius: 10px;
+}
+.slider .featured-content .entry-header .entry-title a{
+    color:#F8FEC9;
+}
 .slider .featured-content .entry-slider{
     padding: 20px;
 }
@@ -44,6 +58,7 @@ use this for setting up the custom css for each slide such as header position, s
     top: 30%;
     width: 486px;
     background:none;
+	position: absolute;
 }
 #banner1 h1.entry-title {
     text-align: right;
@@ -66,6 +81,7 @@ use this for setting up the custom css for each slide such as header position, s
     right: auto;
     top: 1.6%;
     width: 480px;
+	position: absolute;
 }
 
 #banner3{
@@ -75,6 +91,7 @@ use this for setting up the custom css for each slide such as header position, s
     right: auto;
     top: 1.6%;
     width: 423px;
+	position: absolute;
 }
 
 #banner4{
@@ -84,6 +101,7 @@ use this for setting up the custom css for each slide such as header position, s
     right: 2%;
     top: auto;
     width: 310px;
+	position: absolute;
 }
 #banner4 h1.entry-title {
     text-align: right;
@@ -98,6 +116,7 @@ use this for setting up the custom css for each slide such as header position, s
     right: auto;
     top: 2%;
     width: 485px;
+	position: absolute;
 }
 
 #banner6{
@@ -107,10 +126,329 @@ use this for setting up the custom css for each slide such as header position, s
     right: 2%;
     top: 2%;
     width: 410px;
+	position: absolute;
 }
 #banner6 h1.entry-title {
     text-align: right;
 }
 #banner6 .excerpt-slider{
     text-align: right;
+}
+
+
+
+/** wordpress subsite banner css **/
+
+#wp-banner1{
+   bottom: auto;
+    height: auto;
+    left: 2;
+    position: absolute;
+    right: auto;
+    top: 1.6%;
+    width: 400px;
+}
+
+#wp-banner2{
+    bottom: auto;
+    height: auto;
+    left: auto;
+    position: absolute;
+    right: 2%;
+    top: 18px;
+    width: 310px;
+}
+#wp-banner3{
+    bottom: auto;
+    height: auto;
+    left: auto;
+    right: 2%;
+    bottom: 12%;
+    width: 410px;
+	position: absolute;
+}
+#wp-banner3 h1.entry-title {
+    text-align: right;
+}
+#wp-banner3 .excerpt-slider{
+    text-align: right;
+} 
+/*
+  --------Media Screen Css, see below for smaller screens--------------------------
+*/
+@media screen and (max-width: 979px){
+    #wp-banner2 {
+ /*       left: 48.6%; */
+    }
+    
+}
+
+
+/*
+  --------Media Screen Css, see below for smaller screens--------------------------
+*/
+@media screen and (max-width: 670px){
+#wp-banner1{
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    position: relative;
+    text-align: center;
+    width: 90%;
+    left: auto;
+    right: 6%;
+}
+
+#wp-banner2{
+    width: 90%;
+	position:relative;
+	text-align: center;
+	top:0;
+	right: 6%;
+	height: 125px;
+}
+#wp-banner3{
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    position: relative;
+    text-align: center;
+    width: 90%;
+    right: 6%;
+}
+#wp-banner1 h1.entry-title { 
+    font-size: 1.3em;
+	margin-top:0px;
+	color: #013454;
+	text-align: center;
+}
+#wp-banner1 .excerpt-slider{
+    font-size: 1.0em;
+    font-weight: 100;
+    line-height: auto;
+    color:#013454;
+	text-align: center;
+}
+#wp-banner2 h1.entry-title { 
+    font-size: 1.3em;
+	margin-top:0px;
+	color: #013454;
+	text-align: center;
+}
+#wp-banner2 .excerpt-slider{
+    font-size: 1.0em;
+    font-weight: 100;
+    line-height: auto;
+    color:#013454;
+	text-align: center;
+}
+#wp-banner3 h1.entry-title { 
+    font-size: 1.3em;
+	margin-top:0px;
+	color: #013454;
+	text-align: center;
+}
+#wp-banner3 .excerpt-slider{
+    font-size: 1.0em;
+    font-weight: 100;
+    line-height: auto;
+    color:#013454;
+	text-align: center;
+}
+#banner1{ 
+    text-align: center;
+    width: 90%;
+    background:none;
+	position:relative;
+}
+.site-footer {
+    bottom: 0px;
+}
+#banner1 h1.entry-title {
+    text-align: center;
+    font-size: 1.5em;
+	margin-top: 0px;
+	color:#013454;
+}
+
+#banner1 .excerpt-slider{
+    font-size: 1.0em;
+    font-weight: 100;
+    line-height: auto;
+    text-align: center;
+/*	margin-top:130px;*/
+    color:#013454;
+}
+.featured-content-inner {
+    overflow: visible;
+}
+.slider .featured-content .entry-header {
+    background: none;
+}
+#banner2 {
+	text-align: center;
+    width: 91%;
+	position:relative;
+	right: 4%;
+	top:0;
+	left: -5%;
+}
+.slider .featured-content .entry-header .entry-title a {
+    color: #2B2B2B;
+}
+#banner2 h1.entry-title { 
+    font-size: 1.3em;
+	margin-top:0px;
+	color: #013454;
+	text-align: center;
+}
+#banner2 .excerpt-slider{
+    font-size: 1.0em;
+    font-weight: 100;
+    line-height: auto;
+/*	margin-top:135px; */
+    color:#013454;
+	text-align: center;
+}
+
+#banner3{
+    width: 90%; 
+	position:relative;
+	text-align: center;
+	top:0;
+	left: -4%;
+}
+#banner3 h1.entry-title { 
+    font-size: 1.5em;
+	margin-top:0px;
+	text-align: center;
+	color: #013454;
+}
+#banner3 .excerpt-slider{
+    font-size: 1.0em;
+	text-align: center;
+    font-weight: 100;
+    line-height: auto;
+/*	margin-top: 140px; */
+    color:#013454;
+	position:relative;
+}
+
+#banner4{
+    width: 90%;
+	position:relative;
+	text-align: center;
+	top:0;
+	right: 4%;
+}
+#banner4 h1.entry-title { 
+    font-size: 1.5em;
+	text-align: center;
+	margin-top: 0px;
+	color: #013454;
+}
+#banner4 .excerpt-slider{
+    font-size: 1.0em;
+    font-weight: 100;
+    line-height: auto;
+	text-align: center;
+	margin-top: 0px;
+    color:#013454;
+}
+
+#banner5{
+    width: 90%;
+	position:relative;
+	top:0;
+	left: -4%;
+	text-align: center;
+}
+#banner5 h1.entry-title { 
+    font-size: 1.5em;
+	margin-top:0px;
+	text-align: center;
+	color: #013454;
+}
+#banner5 .excerpt-slider{
+    font-size: 1.0em;
+    font-weight: 100;
+    line-height: auto;
+	text-align: center;
+/*	margin-top:135px; */
+    color:#013454;
+}
+
+#banner6{
+	position:relative;
+    width: 90%;
+	text-align: center;
+	top:0;
+	right: 4%;
+}
+#banner6 h1.entry-title { 
+    font-size: 1.5em;
+	margin-top:0px;
+	text-align: center;
+	color: #013454;
+}
+#banner6 .excerpt-slider{
+    font-size: 1.0em;
+    font-weight: 100;
+    line-height: auto;
+	text-align: center;
+/*	margin-top:131px; */
+    color:#013454;
+}
+#banner1 .entry-title a{
+    font-family:'AaarghNormal', Verdana, sans-serif;
+    color:#013454;
+}
+#banner2 .entry-title a{
+    color:#013454;
+}
+#banner3 .entry-title a{
+    color:#013454;
+}
+#banner4 .entry-title a{
+    color:#013454;
+}
+#banner5 .entry-title a{
+    color:#013454;
+}
+#banner6 .entry-title a{
+    color:#013454;
+}
+
+#wp-banner1 .entry-title a{
+    color:#013454;
+}
+#wp-banner2 .entry-title a{
+    color:#013454;
+}
+#wp-banner3 .entry-title a{
+    color:#013454;
+}
+
+}
+
+/*
+  --------Media Screen Css, see below for smaller screens--------------------------
+*/
+@media screen and (max-width: 435px){
+.slider .featured-content .post-thumbnail {
+    padding-top: 55.4913% ;
+}
+.slider .featured-content .entry-slider {
+    padding: 5px 5px 5px 5px ;
+}
+
+.slider-control-paging {
+    background: none ;
+    float: left ;
+    list-style: none outside none ;
+	margin-top: -45% ;
+    position: relative ;
+    width: 100% ;
+    z-index: 3 ;
+}
+.slider-direction-nav li {
+    border-color: #2B2B2B ;
+}
+
 }

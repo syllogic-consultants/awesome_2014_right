@@ -1,5 +1,5 @@
 .post-thumbnail blockquote{
-    padding:1.5em 0 0;
+    padding:1.1em 0 0 35px;
     text-align:right;
     clear:both;
 }
@@ -35,7 +35,8 @@ blockquote::before{
   position: absolute;
   left: 0px;
   top:0px;
-  padding:0.1em;
+  margin-left: -20px;
+/*   padding:0.1em; */
 }
 
 blockquote::after{

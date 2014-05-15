@@ -8,8 +8,8 @@
 <?php
 
 	if ( wp_is_mobile() ) :
-
-	// display mobile sidebar    ?>
+	// display mobile sidebar    
+	?>
         <div id="slideout" class="sidr">
            <div id="slideout-top">
                <?php
@@ -20,12 +20,17 @@
                 <?php endif; ?>
                <div class="search-toggle">
                    <a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'twentyfourteen' ); ?></a>
+				  
                </div>
                <div id="search-container" class="search-box-wrapper hide">
                    <div class="search-box">
                        <?php get_search_form(); ?>
                    </div>
                </div>
+			    <a href="<?php echo get_home_url('1','/'); ?>"><div class="dashicons dashicons-admin-home"></div></a>
+			    <a href="<?php echo get_home_url('2','/'); ?>"><span class="genericon genericon-wordpress"></span></a>
+				<a href="<?php echo get_home_url('3','/'); ?>"><span class="genericon genericon-cart"></span></a>
+				<a href="<?php echo get_home_url('4','/'); ?>"><div class="dashicons dashicons-chart-line"></div></a>
             </div>
 
             <?php if ( has_nav_menu( 'mobile' ) ) : ?>
@@ -44,8 +49,8 @@
 
 <?php
 	else:
-	
-	// display normal sidebar    ?>
+	// display normal sidebar    
+	?>
 	<div id="secondary">
 		<?php if ( has_nav_menu( 'secondary' ) ) : ?>
 		<nav role="navigation" class="navigation site-navigation secondary-navigation">

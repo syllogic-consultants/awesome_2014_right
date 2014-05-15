@@ -1,0 +1,70 @@
+
+@media screen and (max-width: 995px) {
+
+    .search-toggle {
+    	position: relative;
+    	top: -8px;
+    	right: 0px;
+    }
+    #site-header img {
+        padding-right: 0;
+    }
+    #masthead {
+    	height: 80px;
+    }
+    .site-main{
+    	margin-top:80px;
+    }
+    .topbar-menu {
+    display: block;
+    background-color: black;
+    }
+    .site-header{
+    	height:100px;
+    }
+    .primary-navigation.toggled-on {
+    display: block;
+    padding: 48px 0 0 0px;
+    
+    }
+    .nav-toggled {
+    padding-top: 48px ;
+    padding-left: 0px ;
+    }
+    h2.topbar-description {
+    display:none;
+    }
+    .search-box {
+        margin-top: 27px;
+    }
+    .full-width .col-1-2 .post-thumbnail_grid {
+        max-width: 37%;
+        width: 37%;
+    }
+    
+    #menu-top-menu {
+        float: left;
+        padding-right: 0px ;
+        position: relative;
+        width: 100%;
+    }
+    
+    .full-width .site-content {
+        margin-right: 15px ;
+    }
+    .site-footer {
+        bottom: 0px ;
+    }
+    #secondary{
+    min-height: 565px ;
+    margin : 0px ;
+    }
+    .featured-content {
+        padding-right: 0 ;
+    	
+    }
+    nav#primary-navigation {
+        top: 0px ;
+    }
+
+}

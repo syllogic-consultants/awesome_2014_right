@@ -1,0 +1,29 @@
+/**Adjustments for the desktop topbar when screen is small**/
+@media screen and (max-width: 1100px) {
+
+    #secondary{
+        margin-left:-182px;
+    }
+    .featured-content {
+        padding-right: 182px;
+    }
+    .site-footer {
+        right: 0px;
+    }
+    .site-info {
+        padding-right: 182px;
+    }
+    .secondary-navigation ul li:hover > ul, .secondary-navigation ul li.focus > ul {
+        left: -202px;
+    }
+    .full-width .site-content {
+        margin-right: 182px;
+    }
+
+    #masthead {
+    	height: 80px;
+    }
+    .site-main{
+    	margin-top:80px;
+    }
+}
